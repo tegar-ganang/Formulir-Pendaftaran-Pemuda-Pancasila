@@ -197,7 +197,7 @@
                                     <input class="btn btn-primary" type="submit" value="Submit">
                                 </div>
                             </form>
- 
+                            <a href="/article" class="text-decoration-none d-block mt-3">Back to Article</a>
                         </div>
                     </div>
                 </div>

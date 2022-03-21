@@ -99,7 +99,7 @@
                         </table>
 
                         <a href="/form" class="btn btn-primary">Kembali</a>
-
+                        <a href="/article" class="text-decoration-none d-block mt-3">Back to Article</a>
                     </div>
                 </div>
             </div>
