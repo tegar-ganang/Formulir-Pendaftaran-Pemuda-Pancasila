@@ -7,9 +7,22 @@
     <title>Form Pendaftaran Pemuda Pancasila</title>
 
     <style>
-        .card-body {
-            box-shadow: rgba(0, 0, 0, 0.19) 10px 10px 20px, rgba(0, 0, 0, 0.23) 0px 10px 10px;
+    html {
+            height: 100%;
         }
+        body {
+            font-family: sans-serif;
+            background-color:#af0e0e;
+        }
+        .card-body {
+            position: relative;
+            padding: 40px;
+            background: rgb(13, 41, 63);
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0.19) 10px 10px 20px, rgba(0, 0, 0, 0.23) 0px 10px 10px;
+        border-radius: 40px;
+        }
+    
     </style>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -17,103 +30,103 @@
 <body>
  
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center sm:items-center py-4">
                 <div class="col-lg-6">
-                    <div class="card mt-5">
+                    <div class="card mt-3">
                         <div class="card-body" >
                             <p style="text-align: center"><img src="/img/PP.jpg" alt="Logo PP" width="100px"></p>
-                            <h3 class="text-center">Form Pendaftaran Pemuda Pancasila</h3>
+                            <h3 class="text-center" style="color:whitesmoke">Form Pendaftaran Pemuda Pancasila</h3>
 
                              <!-- form validasi -->
                             <form action="/proses" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group" >
-                                    <label for="nama">Nama Lengkap</label>
+                                    <label for="nama" style="color:whitesmoke">Nama Lengkap</label>
                                     <input class="form-control" type="text" name="nama" value="{{ old('nama') }}" class="@error('nama') is-invalid @enderror">
                                     @error('nama')
                		                <div class="alert alert-danger">{{ $message }}</div>
        		                        @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="no_ktp">Nomor KTP</label>
+                                    <label for="no_ktp" style="color:whitesmoke">Nomor KTP</label>
                                     <input class="form-control" type="text" name="no_ktp" value="{{ old('no_ktp') }}" class="@error('no_ktp') is-invalid @enderror">
                                     @error('no_ktp')
                		                <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="tempat_lahir">Tempat Lahir</label>
+                                    <label for="tempat_lahir" style="color:whitesmoke">Tempat Lahir</label>
                                     <input class="form-control" type="text" name="tempat_lahir" value="{{ old('tempat_lahir') }}" class="@error('tempat_lahir') is-invalid @enderror">
                                     @error('tempat_lahir')
                		                <div class="alert alert-danger">{{ $message }}</div>
                                        @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="tanggal_lahir">Tanggal Lahir</label>
+                                    <label for="tanggal_lahir" style="color:whitesmoke">Tanggal Lahir</label>
                                     <input class="form-control" type="date" name="tanggal_lahir" value="{{ old('tanggal_lahir') }}" class="@error('tanggal_lahir') is-invalid @enderror">
                                     @error('tanggal_lahir')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <label class="@error('sex') is-invalid @enderror">Jenis Kelamin</label>
+                                    <label class="@error('sex') is-invalid @enderror" style="color:whitesmoke">Jenis Kelamin</label>
                                     @error('sex')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input class="custom-control-input" type="radio" value="male" id="male" name="sex">
-                                            <label class="custom-control-label" for="male">Laki-laki</label>
+                                            <label class="custom-control-label" for="male" style="color:whitesmoke">Laki-laki</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input class="custom-control-input" type="radio" value="female" id="female" name="sex">
-                                            <label class="custom-control-label" for="female">Perempuan</label>
+                                            <label class="custom-control-label" for="female" style="color:whitesmoke">Perempuan</label>
                                         </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="alamat">Alamat</label>
+                                    <label for="alamat" style="color:whitesmoke">Alamat</label>
                                     <input class="form-control" type="text" name="alamat" value="{{ old('alamat') }}" class="@error('alamat') is-invalid @enderror">
                                     @error('alamat')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="provinsi">Provinsi</label>
+                                    <label for="provinsi" style="color:whitesmoke">Provinsi</label>
                                     <input class="form-control" type="text" name="provinsi" value="{{ old('provinsi') }}" class="@error('provinsi') is-invalid @enderror">
                                     @error('provinsi')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="kota">Kota</label>
+                                    <label for="kota" style="color:whitesmoke">Kota</label>
                                     <input class="form-control" type="text" name="kota" value="{{ old('kota') }}" class="@error('kota') is-invalid @enderror">
                                     @error('kota')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="kecamatan">Kecamatan</label>
+                                    <label for="kecamatan" style="color:whitesmoke">Kecamatan</label>
                                     <input class="form-control" type="text" name="kecamatan" value="{{ old('kecamatan') }}" class="@error('kecamatan') is-invalid @enderror">
                                     @error('kecamatan')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="kelurahan">Kelurahan</label>
+                                    <label for="kelurahan" style="color:whitesmoke">Kelurahan</label>
                                     <input class="form-control" type="text" name="kelurahan" value="{{ old('kelurahan') }}" class="@error('kelurahan') is-invalid @enderror">
                                     @error('kelurahan')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="no_hp">Nomor Telepon</label>
+                                    <label for="no_hp" style="color:whitesmoke">Nomor Telepon</label>
                                     <input class="form-control" type="text" name="no_hp" value="{{ old('no_hp') }}" class="@error('no_hp') is-invalid @enderror">
                                     @error('no_hp')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Email</label>
+                                    <label for="email" style="color:whitesmoke">Email</label>
                                     <input class="form-control" type="email" name="email" value="{{ old('email') }}" class="@error('email') is-invalid @enderror">
                                     @error('email')
                		                <div class="alert alert-danger">{{ $message }}</div> @enderror
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label class="@error('religion') is-invalid @enderror">Agama</label>
+                                    <label class="@error('religion') is-invalid @enderror" style="color:whitesmoke">Agama</label>
                                     @error('religion')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -128,7 +141,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="@error('blood_type') is-invalid @enderror">Golongan Darah</label>
+                                    <label class="@error('blood_type') is-invalid @enderror" style="color:whitesmoke">Golongan Darah</label>
                                     @error('blood_type')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -142,7 +155,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="pekerjaan">Pekerjaan</label>
+                                    <label for="pekerjaan" style="color:whitesmoke">Pekerjaan</label>
                                     <input class="form-control" type="text" name="pekerjaan" value="{{ old('pekerjaan') }}" class="@error('pekerjaan') is-invalid @enderror">
                                      @error('pekerjaan')
                                               <div class="alert alert-danger">{{ $message }}</div>
@@ -150,7 +163,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label class="@error('pendidikan') is-invalid @enderror">Pendidikan Terakhir</label>
+                                    <label class="@error('pendidikan') is-invalid @enderror" style="color:whitesmoke">Pendidikan Terakhir</label>
                                     @error('pendidikan')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -166,21 +179,21 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="tinggi">Tinggi Badan(cm)</label>
+                                    <label for="tinggi" style="color:whitesmoke">Tinggi Badan(cm)</label>
                                     <input class="form-control" type="text" name="tinggi" value="{{ old('tinggi') }}" class="@error('tinggi') is-invalid @enderror">
                                      @error('tinggi')
                                               <div class="alert alert-danger">{{ $message }}</div>
                                      @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="berat">Berat Badan(kg)</label>
+                                    <label for="berat" style="color:whitesmoke">Berat Badan(kg)</label>
                                     <input class="form-control" type="text" name="berat" value="{{ old('berat') }}" class="@error('berat') is-invalid @enderror">
                                      @error('berat')
                                               <div class="alert alert-danger">{{ $message }}</div>
                                      @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label for="image" class="form-label">KTP</label>
+                                    <label for="image" class="form-label" style="color:whitesmoke">KTP</label>
                                     <input class="form-control" type="file" id="image" name="image" value="{{ old('image') }}" class="@error('image') is-invalid @enderror">
                                     @error('image')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -191,13 +204,13 @@
                                     @error('exampleCheck1')
                                              <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
-                                    <label class="form-check-label" for="exampleCheck1" >Data yang telah diisi valid</label>
+                                    <label class="form-check-label" for="exampleCheck1" style="color:whitesmoke">Data yang telah diisi valid</label>
                                 </div>
                                 <div class="form-group">
                                     <input class="btn btn-primary" type="submit" value="Submit">
                                 </div>
                             </form>
-                            <a href="/article" class="text-decoration-none d-block mt-3">Back to Article</a>
+                            <a href="/article" class="text-decoration-none d-block mt-3" style="color:rgb(65, 203, 245)">Back to Article</a>
                         </div>
                     </div>
                 </div>
