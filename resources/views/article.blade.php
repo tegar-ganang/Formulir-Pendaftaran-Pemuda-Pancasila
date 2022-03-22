@@ -19,4 +19,5 @@
         <a href="/article/{{ $article->slug }}" class="text-decoration-none">Read more...</a> 
         </article>
     @endforeach
+    <a href="/article" class="text-decoration-none">Back</a>
 @endsection

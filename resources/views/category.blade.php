@@ -14,4 +14,5 @@
             <p>{{ $article->excerpt }}</p>
         </article>
     @endforeach
+    <a href="/article" class="text-decoration-none d-block mt-3">Back</a>
 @endsection
